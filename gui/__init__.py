@@ -372,7 +372,7 @@ class AWFlashGUI:
         thread.start()
 
     def _connect_done(self, result):
-        self.btn_scan.configure(state=tk.NORMAL, state=tk.DISABLED)
+        self.btn_scan.configure(state=tk.NORMAL)
         self.status_label.configure(text=f"已连接: {result['chip_name']}", fg=self.success)
         self.device_info.pack()
         self.info_chip_id.configure(text=f"Chip ID: {result['chip_id']}")
